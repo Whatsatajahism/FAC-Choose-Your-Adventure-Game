@@ -1,17 +1,17 @@
 *, *::before , ::after{
     box-sizing: border-box;
-    font-family: 'Libre Baskerville', serif;;
+    
 }
 
 body{
     padding: 0;
     margin: 0;
-    width: 100vh;
     height: 100vh;
     background-color: #622f22;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Libre Baskerville', serif;
 }
 
 .grid-container {
@@ -39,8 +39,29 @@ body{
     border-color: black;
 }
 
-@media screen and (max-width: 680px) {
-    .btn-grid{
-        grid-template-columns: 1;
+@media (min-width: 481px) and (max-width: 1200px){
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 2rem;
+        font-size: 1rem;
+        background-color: #a86632;
     }
-}
+
+    .btn-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+
+    .btn{
+        border: 2px solid green;
+        border-radius: 5px;
+        font-size: auto;
+    }
+
+  }
